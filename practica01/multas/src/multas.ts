@@ -20,7 +20,7 @@ function reciboDe(prestamo: Prestamo): string {
 }
 
 const prestamo1: Prestamo = {
-  folio: "F001",
+  folio: "F",
   multa: 350,
   ejemplar: 14,
   estado: "vencido",
