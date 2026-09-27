@@ -97,23 +97,6 @@ Nest is an MIT-licensed open source project. It can grow thanks to the sponsors 
 
 Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
 
-## Preguntas de la Práctica 06
+## Preguntas de la Práctica 07
 
-**¿Qué pasaría si el módulo no quedara registrado en la raíz?**
-No podría comunicarse con la aplicación y no serviría.
-
-**¿Por qué los métodos del repositorio devuelven promesas si los datos van a estar en memoria?**
-Por si se cambian por una base de datos en otro momento no habría que ajustar todos los métodos
-
-**¿Qué error apareció al cambiar a la interfaz, y por qué la clase sí se había resuelto sola?**
-Hubo que ajustar inscripciones.module para que quede desacoplado del service actual y se pueda modificar en cualquer momento
-
-**¿Por qué el servicio necesita un token para el repositorio, pero el controlador no lo necesita para el servicio?**
-Service es una clase concreta y no se borra en runtime por lo que inyectarlo por tipo es suficiente.
-
-**¿cuál es la diferencia entre un 400 y un 409?**
-400 = El servidor no entiende la petición.
-409 = Si entiendep pero choca con el estado actual del servidor.
-
-**¿Por qué cambió el código de estado de esa última petición?**
-Poeque la cancelación de una inscripción abrió el lugar a otro. La cancelada queda como historial.
+**¿Por qué esta interfaz no menciona Express, NestJS ni memoria?**
