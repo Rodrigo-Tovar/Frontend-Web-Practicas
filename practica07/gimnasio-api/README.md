@@ -100,3 +100,16 @@ Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
 ## Preguntas de la Práctica 07
 
 **¿Por qué esta interfaz no menciona Express, NestJS ni memoria?**
+Porque no sabe si detras hay un Map en memoria o MySQL
+
+**¿Qué palabra de esa clase es la que promete cumplir la interfaz del paso anterior?**
+La palabra implements es la que hace que la clase deba tener todos los métodos que declara el repositorio
+
+**¿Por qué el Service no sabe qué es HTTP?**
+Porque solo depende de MiembroRepository; recibe y devuelve entidades, no Request/Response. El mapeo a HTTP vive en el Controller, así el Service se puede reusar/testear sin servidor.
+
+**¿Por qué el Service se inyecta sin token y el repo sí?**
+El Service es una clase concreta que Nest puede resolver por su tipo. El repositorio no existe en runtime, así que se necesita el token para decirle a Nest qué clase concreta usar.
+
+**¿Qué prueba que no se rompió Inscripciones?**
+Correr las mismas peticiones de la Práctica 6 y ver que devuelven lo mismo y de que ambas rutas aparecen registradas al arrancar.
