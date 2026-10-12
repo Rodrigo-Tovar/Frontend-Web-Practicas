@@ -76,3 +76,6 @@ Cabe dentro del principio de zero trust, no se debe confiar en que la operación
 Cambiar una sola línea en src/auth/auth.module.ts
 
 { provide: USUARIO_REPOSITORY, useClass: UsuarioPrismaRepository },
+
+**¿Por qué es importante tomar al usuario de los claims del token y no de un parámetro de la URL o del cuerpo?**
+Para tener una capa extra de seguridad, y no caer en vulnerabilidades como un tampering tan sencillo como modificar la petición http.
