@@ -19,12 +19,16 @@ export class MiembroNoEncontradoError extends ErrorDeDominio {
 
 export class CupoLlenoError extends ErrorDeDominio {
   constructor(horarioId: number, cupoMaximo: number) {
-    super(`El horario ${horarioId} ya tiene ${cupoMaximo} inscripciones confirmadas`);
+    super(
+      `El horario ${horarioId} ya tiene ${cupoMaximo} inscripciones confirmadas`,
+    );
   }
 }
 
 export class InscripcionDuplicadaError extends ErrorDeDominio {
   constructor(horarioId: number, miembroId: number) {
-    super(`El miembro ${miembroId} ya esta inscrito en el horario ${horarioId}`);
+    super(
+      `El miembro ${miembroId} ya esta inscrito en el horario ${horarioId}`,
+    );
   }
 }
