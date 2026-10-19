@@ -30,3 +30,18 @@ If you are developing a production application, we recommend enabling type-aware
 ```
 
 See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+
+# Preguntas
+
+**Responder: ¿En qué se convirtió cada etiqueta del JSX?**
+Cada etiqueta JSX se convirtió en una llamada a función: <div> → React.createElement("div", ...) o \_jsxs("div", ...); <h1> y <p> igual. El texto y las expresiones {nombre} pasan a ser hijos.
+
+**Responder: Si React es «sólo una biblioteca», ¿quién traduce el JSX?**
+El compilador, no React ni el navegador. React sólo aporta createElement o el runtime react/jsx-runtime; la traducción ocurre antes de ejecutar el código.
+
+**Responder: ¿qué hace createRoot y qué hace render?**
+CreateRoot se encarga de crear un contenedor raíz (o "root") en un elemento del DOM existente
+Render se encarga de dibujar (o proyectar) tus componentes de React dentro de ese contenedor raíz
+
+**Responder: ¿por qué el nombre de un componente empieza con mayúscula?**
+Para poder diferenciar sus componentes de las etiquetas HTML nativas
